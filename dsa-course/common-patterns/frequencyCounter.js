@@ -44,9 +44,8 @@ function same(arr1, arr2) {
       return false;
     }
   }
-  console.log(frequencyCounter1);
-  console.log(frequencyCounter2);
   return true;
 }
 
-console.log(same([1, 2, 3, 2], [9, 1, 4, 4]));
+console.log(same([1, 2, 3, 2], [1, 2, 3, 2]));
+console.log(same([2, 2, 2, 2], [4, 4, 4, 4]));

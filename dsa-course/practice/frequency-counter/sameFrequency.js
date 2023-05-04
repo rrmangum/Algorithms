@@ -38,9 +38,9 @@
 // SOLVE/SIMPLIFY
 function sameFrequency(num1, num2) {
   let lookup = {};
-  num1 = String(num1).split("").map(Number);
-  num2 = String(num2).split("").map(Number);
-  if (num1.length !== num2.length) {
+  let strNum1 = num1.toString();
+  let strNum2 = num2.toString();
+  if (strNum1.length !== strNum2.length) {
     return false;
   }
   for (let currentNumber of num1) {

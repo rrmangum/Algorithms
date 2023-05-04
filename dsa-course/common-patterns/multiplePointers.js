@@ -3,7 +3,7 @@
 
 // Very efficient for solving problems with minimal space complexity as well
 
-// Generally used to search for a pair
+// Generally used to search for a pair - MUST BE A SORTED ARRAY
 
 // Write a function called sumZero which accepts a sorted array of integers.
 // The function should find the first pair where the sum is 0.

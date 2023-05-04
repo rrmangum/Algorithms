@@ -38,7 +38,6 @@ function validAnagram(first, second) {
   for (let letter of first) {
     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
   }
-  console.log(lookup);
 
   for (let letter of second) {
     if (!lookup[letter]) {
