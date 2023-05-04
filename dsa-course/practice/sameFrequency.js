@@ -13,8 +13,7 @@
 // sameFrequency(3589578, 5879385) // true
 // sameFrequency(22, 222) // false
 // -Complex
-// sameFrequency()
-
+// sameFrequency() - couldn't think of any
 // -Empty
 // sameFrequency() // false
 // -Invalid
@@ -25,15 +24,15 @@
 // function sameFrequency(num1, num2) {
 // create an object to hold the keys (each character of the number)
 // and its value (the frequency it appears)
-// convert the numbers to strings so we can loop through them
-// loop through the first string
+// convert the numbers to arrays of numbers so we can loop through them
+// loop through the first array
 // add it's keys and frequencies to the comparison object
-// loop through the second string
-// if the value in this string is the same as the key in the object
+// loop through the second array
+// if the value in this array is the same as the key in the object
 // decrement the value for that key
 // if we encounter a zero value for a key
 // return false
-// return true
+// return true at the end
 // }
 
 // SOLVE/SIMPLIFY
@@ -44,7 +43,6 @@ function sameFrequency(num1, num2) {
   if (num1.length !== num2.length) {
     return false;
   }
-
   for (let currentNumber of num1) {
     lookup[currentNumber] = (lookup[currentNumber] || 0) + 1;
   }
@@ -57,6 +55,10 @@ function sameFrequency(num1, num2) {
   }
   return true;
 }
+
+// Refactor
+// I'm not certain this can be improved. It is linear time complexity,
+// but potentially could be faster with recursion?
 
 console.log(sameFrequency(182, 281)); // true
 console.log(sameFrequency(34, 14)); // false
