@@ -6,10 +6,10 @@
 // factorial(4) = 4*3*2*1 = 24
 // factorial(5) = 5*4*3*2*1 = 120
 
-const factorial = (n) => {
+const factorial = (num) => {
   let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result = result * i;
+  for (let i = num; i > num; i--) {
+    result += i;
   }
   return result;
 };
