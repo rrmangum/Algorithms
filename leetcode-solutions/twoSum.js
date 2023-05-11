@@ -18,15 +18,15 @@ var twoSum = function (nums, target) {
   // T - O(n) Linear
   // S - O(n) Linear
 
-  let map = {};
+  let lookup = {};
 
   for (let i = 0; i < nums.length; i++) {
     let value = nums[i];
     let complementPair = target - value;
-    if (map[complementPair] !== undefined) {
-      return [map[complementPair], i];
+    if (lookup[complementPair] !== undefined) {
+      return [lookup[complementPair], i];
     } else {
-      map[value] = i;
+      lookup[value] = i;
     }
   }
 
