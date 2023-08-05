@@ -34,6 +34,36 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  //   pop() {
+  //     if (!this.head) return;
+  //     let current = this.head;
+  //     let removedNode = null;
+
+  //     while (current) {
+  //       if (current.next === this.tail) {
+  //         removedNode = this.tail;
+  //         current = null;
+  //         this.tail = current;
+  //       } else {
+  //         current = current.next;
+  //       }
+  //     }
+  //     this.length--;
+  //     return removedNode;
+  //   }
+  pop() {
+    if (!this.head) return undefined;
+    let current = this.head;
+    let newTail = current;
+
+    while (current.next) {
+      newTail = current;
+      current = current.next;
+    }
+    this.tail = newTail;
+    this.tail.next = null;
+  }
 }
 
 let list = new SinglyLinkedList();
